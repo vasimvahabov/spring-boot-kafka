@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-boot-kafka
+  kafka:
+    consumer:
+      group-id: group-order-status-updates
+      auto-offset-reset: earliest
+    bootstrap-servers: "localhost:9999"
+    admin:
+      auto-create: false
+
+logging:
+  level:
+    root: info
+    com.example.springbootkafka: info
+
+kafka:
+  topics:
+    order-status-updates: order.status.updates
